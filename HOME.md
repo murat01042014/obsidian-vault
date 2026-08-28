@@ -27,6 +27,11 @@
 - [people/example-person.md](people/example-person.md) — [замени на реального
   человека из твоих дел]
 
+## Техника / Claude
+
+- папка [TechClaude/](TechClaude/) — настройки инструментов.
+  - [2026-08-28 — бэкап vault в git и Remote Control](TechClaude/2026-08-28-настройки-git-и-remote-control.md)
+
 ## Решения
 
 - папка [decisions/](decisions/) — по файлу на решение, `ГГГГ-ММ-ДД-о-чём.md`.
