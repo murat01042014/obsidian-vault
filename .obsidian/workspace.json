@@ -253,8 +253,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "ae389e58d03c9b07",
+  "active": "dd90ddb96144ef2e",
   "lastOpenFiles": [
+    "Personal/README.md",
+    "_archive/README.md",
+    "OZON/README.md",
     "2026-08-28.md",
     "status.md",
     "session-end.md",
@@ -268,7 +271,6 @@
     "Без названия.canvas",
     "CACF",
     "CACF.base",
-    "_archive/README.md",
     "decisions/YYYY-MM-DD-example-decision.md",
     "people/example-person.md",
     "plans/week.md",
@@ -290,7 +292,6 @@
     "CACF_profile/plans/week.md",
     "CACF_profile/plans/today.md",
     "CACF_profile/plans",
-    "CACF_profile/people/example-person.md",
-    "CACF_profile/HOME.md"
+    "CACF_profile/people/example-person.md"
   ]
 }
