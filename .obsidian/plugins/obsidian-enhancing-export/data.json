@@ -59,5 +59,9 @@
   "openExportedFile": true,
   "env": {},
   "showExportProgressBar": true,
-  "lastEditName": "Word (.docx)"
+  "lastEditName": "Word (.docx)",
+  "lastExportDirectory": {
+    "win32": "C:\\Users\\User\\Documents"
+  },
+  "lastExportType": "Word (.docx)"
 }
