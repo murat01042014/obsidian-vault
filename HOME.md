@@ -36,6 +36,8 @@
 - папка [COP31/](COP31/) — 31-я Конференция ООН по климату (Анталья, ноя 2026),
   павильон РК. Правило сессий: [COP31/README.md](COP31/README.md).
 - папка [UNDP/](UNDP/) — проекты ПРООН. Правило сессий: [UNDP/README.md](UNDP/README.md).
+- папка [Procurement/](Procurement/) — закупки ЦАКФ. Правило сессий: [Procurement/README.md](Procurement/README.md).
+  Архив: `C:\Users\User\Documents\ГЗ\`.
 - [projects/my-project.md](projects/my-project.md) — [замени на свой проект:
   работа, ремонт, поездка, хоть рецепт борща]
 
