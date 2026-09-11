@@ -42,6 +42,8 @@
   Исходники: `D:\ESG\`.
 - папка [Procurement/](Procurement/) — закупки ЦАКФ. Правило сессий: [Procurement/README.md](Procurement/README.md).
   Файлы: `D:\Закупки\` (процедуры / по поставщикам); архив-оригинал: `C:\Users\User\Documents\ГЗ\`.
+- папка [TAZA/](TAZA/) — «Таза Қазақстан»: инициатива, ЦАКФ как оператор (проектный офис). Правило сессий: [TAZA/README.md](TAZA/README.md).
+  Исходники: `D:\ТАЗА\` (оригиналы — `C:\Users\User\Documents\Таза Казахстан\`).
 - [projects/my-project.md](projects/my-project.md) — [замени на свой проект:
   работа, ремонт, поездка, хоть рецепт борща]
 
