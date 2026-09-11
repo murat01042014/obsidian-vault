@@ -38,6 +38,8 @@
 - папка [UNDP/](UNDP/) — проекты ПРООН. Правило сессий: [UNDP/README.md](UNDP/README.md).
 - папка [Меморандумы/](Меморандумы/) — проекты меморандумов ЦАКФ с партнёрами (Word — `D:\Меморандумы\`;
   шаблоны — меморандум с ИАЦ ООС в `C:\Users\User\Documents\ИАЦ ООС\`).
+- папка [ESG/](ESG/) — ESG-направление ЦАКФ (методология, раскрытие, ESGQ). Правило сессий: [ESG/README.md](ESG/README.md).
+  Исходники: `D:\ESG\`.
 - папка [Procurement/](Procurement/) — закупки ЦАКФ. Правило сессий: [Procurement/README.md](Procurement/README.md).
   Файлы: `D:\Закупки\` (процедуры / по поставщикам); архив-оригинал: `C:\Users\User\Documents\ГЗ\`.
 - [projects/my-project.md](projects/my-project.md) — [замени на свой проект:
