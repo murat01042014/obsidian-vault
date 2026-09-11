@@ -39,7 +39,7 @@
 - папка [Меморандумы/](Меморандумы/) — проекты меморандумов ЦАКФ с партнёрами (Word — `D:\Меморандумы\`;
   шаблоны — меморандум с ИАЦ ООС в `C:\Users\User\Documents\ИАЦ ООС\`).
 - папка [Procurement/](Procurement/) — закупки ЦАКФ. Правило сессий: [Procurement/README.md](Procurement/README.md).
-  Архив: `C:\Users\User\Documents\ГЗ\`.
+  Файлы: `D:\Закупки\` (процедуры / по поставщикам); архив-оригинал: `C:\Users\User\Documents\ГЗ\`.
 - [projects/my-project.md](projects/my-project.md) — [замени на свой проект:
   работа, ремонт, поездка, хоть рецепт борща]
 
