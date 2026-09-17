@@ -9,7 +9,8 @@
 - `UNDP Quantum - Руководство для Поставщика.pdf` — руководство портала, 2022.
 - `Webmail __ Registration _ UNDP procurement portal.pdf` — письмо Фонда в
   undp.kz.procurement@undp.org от 09.09.2026.
-- Прежняя редакция ТЗ (подписана 05.08 и 09.08.2026, Docusign EAB39CEE…) — в `Documents\ГЗ\`.
+- `ToR_KZ_Sustainability_Disclosure_Roadmap RU (ред. 09.08.2026, устарела).pdf` — прежняя редакция
+  (Docusign EAB39CEE…), перенесена из `Documents\ГЗ` 16.09; держим как доказательство изменения условий.
 
 ## ⚠️ Что изменилось в редакции от 14.09
 
