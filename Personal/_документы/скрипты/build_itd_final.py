@@ -113,7 +113,7 @@ P = [
          idn="057345243", idd="24.07.2024", addr_ru="г. Астана, Есильский район, ул. Ақмешіт, д. 17", addr_en="Astana, Yesil District, Akmeshit St., 17",
          pos="comm_dir", salary=(1300000, "один миллион триста тысяч", "one million three hundred thousand"),
          start="09.11.2026", end=None, cdate="02.11.2026", rep=REP_PO, func=None),
-    dict(file="Дутпаева А.К.", tag=", уд.л. по черновику", fem=True, ru="Дутпаева Алия Кумархановна", en="Dutpayeva Aliya Kumarkhanovna",
+    dict(file="Дутпаева А.К.", fem=True, ru="Дутпаева Алия Кумархановна", en="Dutpayeva Aliya Kumarkhanovna",
          idn="044193316", idd="11.04.2018", addr_ru="г. Астана, пр. Бауржан Момышулы, д. 18, кв. 33", addr_en="Astana, Baurzhan Momyshuly Ave., 18, apt. 33",
          pos="comm_lead", salary=(700000, "семьсот тысяч", "seven hundred thousand"),
          start="02.11.2026", end=None, cdate="02.11.2026", rep=REP_COMM, func=None),
