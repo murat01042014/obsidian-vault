@@ -90,7 +90,7 @@ P = [
          start="02.11.2026", end="02.11.2027", cdate="02.11.2026", rep=REP_COMM, func=None),
     # 02.11.2026: удостоверения есть, черновиков ТД не было - адрес и функции пока маркером
     dict(file="Бектемиров А.Р.", fem=False, ru="Бектемиров Амир Русланович", en="Bektemirov Amir Ruslanovich",
-         idn="064064248", idd="21.07.2026", addr_ru=None, addr_en=None,
+         idn="064064248", idd="21.07.2026", addr_ru="г. Астана, ул. Кошкарбаева, д. 54а", addr_en="Astana, Koshkarbayev St., 54a",
          pos="pm_lead", salary=(700000, "семьсот тысяч", "seven hundred thousand"),
          start="02.11.2026", end=None, cdate="02.11.2026", rep=REP_PM, func=None),
     dict(file="Мухамадиева Н.А.", fem=True, ru="Мухамадиева Найля Азаматовна", en="Mukhamadiyeva Nailya Azamatovna",
@@ -278,6 +278,23 @@ FP["Дутпаева А.К."] = (
    "Coordination of publications and content on social media.",
    "Monitoring of reach and effectiveness of publications.",
    "Maintaining a database of bloggers and influencers."])
+FP["Бектемиров А.Р."] = (
+  ["Обеспечивает организационное сопровождение проектов, координацию проектных задач и контроль реализации мероприятий.",
+   "Должностные функции:",
+   "Участвует в разработке и реализации проектов.",
+   "Координирует выполнение проектных задач и мероприятий.",
+   "Осуществляет мониторинг сроков и результатов реализации проектов.",
+   "Готовит отчёты, справки и презентационные материалы.",
+   "Участвует в организации рабочих встреч и мероприятий.",
+   "Выполняет поручения непосредственного руководителя в пределах своей компетенции."],
+  ["Provides organizational support for projects, coordination of project tasks and monitoring of the implementation of activities.",
+   "Job functions:",
+   "Participates in the development and implementation of projects.",
+   "Coordinates the performance of project tasks and activities.",
+   "Monitors the timing and results of project implementation.",
+   "Prepares reports, reference notes and presentation materials.",
+   "Participates in organizing working meetings and events.",
+   "Performs instructions of the immediate supervisor within the scope of their competence."])
 BODY_RPR = '<w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr>'
 BODY_P = ('<w:p><w:pPr><w:tabs><w:tab w:val="left" w:pos="800"/></w:tabs><w:spacing w:after="80" w:line="240" w:lineRule="auto"/>'
           '<w:ind w:left="800" w:hanging="87"/><w:jc w:val="both"/>' + BODY_RPR + '</w:pPr><w:r>' + BODY_RPR + '<w:t xml:space="preserve">{}</w:t></w:r></w:p>')
@@ -353,7 +370,7 @@ TABS_EN = '<w:tabs><w:tab w:val="left" w:pos="284"/><w:tab w:val="left" w:pos="9
 TABS_RU = '<w:tabs><w:tab w:val="left" w:pos="290"/><w:tab w:val="left" w:pos="998"/></w:tabs>'
 TABS_RU_LIST = '<w:tabs><w:tab w:val="left" w:pos="290"/></w:tabs>'
 HEAD_RU = ("Основные должностные функции", "Job functions", "Main job functions")
-DESC_START = ("Описание должности", "Position description", "Главный специалист", "The Chief Specialist")
+DESC_START = ("Описание должности", "Position description", "Главный специалист", "The Chief Specialist", "Обеспечивает", "Provides")
 
 def _ptext(p):
     return re.sub(r"<[^>]+>", "", p)
@@ -427,6 +444,56 @@ def layout(x):
     out.append(x[pos:])
     return "".join(out)
 
+
+# --- уменьшенные отступы в теле договора и в Приложении 2 (по просьбе Мурата, 03.11.2026): меньше страниц при печати ---
+TIGHT_AFTER, TIGHT_BEFORE = 20, 40
+
+NUM_SHORT, NUM_LONG = 567, 720      # 10 мм и 12,7 мм (номер вида 2.1.1. шире 10 мм)
+
+def _narrow_indent(pm):
+    p = pm.group(0)
+    if '<w:ind w:left="800" w:hanging="800"/>' not in p:
+        return p
+    m = re.search(r"<w:t(?: [^>]*)?>([^<]*)</w:t>", p)
+    label = m.group(1).strip() if m else ""
+    if not re.fullmatch(r"(?:\d+(?:\.\d+)*\.?|[A-Za-zА-Я]\.)", label):
+        return p
+    w = NUM_SHORT if len(label) <= 5 else NUM_LONG
+    p = p.replace('<w:ind w:left="800" w:hanging="800"/>', '<w:ind w:left="%d" w:hanging="%d"/>' % (w, w))
+    return p.replace('<w:tab w:val="left" w:pos="800"/>', '<w:tab w:val="left" w:pos="%d"/>' % w)
+
+def tighten(x):
+    trs = list(re.finditer(r"<w:tr[ >].*?</w:tr>", x, re.S))
+    def sp(m):
+        t = m.group(0)
+        t = re.sub(r'w:after="80"', 'w:after="%d"' % TIGHT_AFTER, t)
+        t = re.sub(r'w:before="160"', 'w:before="%d"' % TIGHT_BEFORE, t)
+        return t
+    out = []; pos = 0
+    for i, m in enumerate(trs):
+        out.append(x[pos:m.start()])
+        blk = m.group(0)
+        if i <= 163 or 170 <= i <= 197:
+            blk = re.sub(r"<w:spacing [^>]*/>", sp, blk)
+            blk = re.sub(r"<w:p[ >].*?</w:p>", _narrow_indent, blk, flags=re.S)
+        if i in (163, 169, 198):        # подписи сторон: строка не разрывается между листами
+            if "<w:trPr>" in blk:
+                blk = blk.replace("<w:trPr>", "<w:trPr><w:cantSplit/>", 1)
+            else:
+                blk = re.sub(r"(<w:tr[ >][^>]*>(?:<w:tblPrEx>.*?</w:tblPrEx>)?)", r"\g<1><w:trPr><w:cantSplit/></w:trPr>", blk, count=1, flags=re.S)
+        if i == 162:                    # «В удостоверение чего» остаётся на одном листе с подписями
+            def keep(pm):
+                p = pm.group(0)
+                if "<w:keepNext" in p:
+                    return p
+                if "<w:pStyle" in p:
+                    return re.sub(r"(<w:pStyle [^>]*/>)", r"\g<1><w:keepNext/>", p, count=1)
+                return p.replace("<w:pPr>", "<w:pPr><w:keepNext/>", 1)
+            blk = re.sub(r"<w:p[ >].*?</w:p>", keep, blk, flags=re.S)
+        out.append(blk); pos = m.end()
+    out.append(x[pos:])
+    return "".join(out)
+
 def numbering_add(n):
     add = "".join('<w:num w:numId="%d"><w:abstractNumId w:val="0"/><w:lvlOverride w:ilvl="0"><w:startOverride w:val="1"/></w:lvlOverride></w:num>' % k for k in (8, 9))
     return n.replace("<w:numIdMacAtCleanup", add + "<w:numIdMacAtCleanup", 1) if "<w:numIdMacAtCleanup" in n else n.replace("</w:numbering>", add + "</w:numbering>")
@@ -451,7 +518,7 @@ def build(p):
             if x2.count(old) != 1:
                 raise SystemExit("п. 2.5 не найден: " + old[:40])
             x2 = x2.replace(old, new)
-    x2 = layout(x2)
+    x2 = tighten(layout(x2))
     minidom.parseString(x2.encode("utf8"))
     out = os.path.join(OUTDIR, f"ИТД - {p['file']} (предитоговый 2026-11-03{p.get('tag', '')}).docx")
     tmp = out + ".tmp"
