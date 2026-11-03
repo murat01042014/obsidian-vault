@@ -105,7 +105,7 @@ P = [
     dict(file="Өміртай А.", fem=False, ru="Өміртай Амалбек Даркенұлы", en="Omirtay Amalbek Darkenuly",
          idn="044781611", idd="25.07.2019", addr_ru="г. Астана, ул. Достык, д. 12/1, кв. 1", addr_en="Astana, Dostyk St., 12/1, apt. 1",
          pos="soc_dir", salary=(1300000, "один миллион триста тысяч", "one million three hundred thousand"),
-         start="03.11.2026", end=None, cdate="02.11.2026", rep=REP_PO, func=None),
+         start="03.11.2026", end=None, cdate="03.11.2026", rep=REP_PO, func=None),
     dict(file="Тленчиева Ш.", tag=", без уд.л.", fem=True, ru="Тленчиева Шырын [отчество]", en=None, idn=None, idd=None, addr_ru=None, addr_en=None,
          pos="soc", salary=(1000000, "один миллион", "one million"),
          start="[день].12.2026", end=None, cdate="[день].12.2026", rep=REP_SOC, func=None),
