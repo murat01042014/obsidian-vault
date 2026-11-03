@@ -525,6 +525,7 @@ def build(p):
             return func_block(para, FP[p["file"]][1 if counter[0] == 22 else 0])
         return fill_paragraph(para, V.get(counter[0], []), p["fem"], counter[0])
     x2 = re.sub(r"<w:p[ >].*?</w:p>", repl, x, flags=re.S)
+    x2 = x2.replace("проживающий (-ая)", "проживающая" if p["fem"] else "проживающий")   # формулировка адреса по полу работника
     if p.get("no_probation"):
         # по просьбе Мурата: без испытательного срока (формулировка прежнего шаблона)
         for old, new in PROBATION_OFF:
