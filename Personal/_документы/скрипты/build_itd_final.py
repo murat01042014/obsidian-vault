@@ -460,6 +460,7 @@ def layout(x):
 
 # --- уменьшенные отступы в теле договора и в Приложении 2 (по просьбе Мурата, 03.11.2026): меньше страниц при печати ---
 TIGHT_AFTER, TIGHT_BEFORE = 20, 40
+SCH1_AFTER, SCH1_BEFORE = 20, 40
 
 NUM_SHORT, NUM_LONG = 567, 720      # 10 мм и 12,7 мм (номер вида 2.1.1. шире 10 мм)
 
@@ -477,6 +478,11 @@ def _narrow_indent(pm):
 
 def tighten(x):
     trs = list(re.finditer(r"<w:tr[ >].*?</w:tr>", x, re.S))
+    def sp1(m):
+        t = m.group(0)
+        t = re.sub(r'w:after="80"', 'w:after="%d"' % SCH1_AFTER, t)
+        t = re.sub(r'w:before="160"', 'w:before="%d"' % SCH1_BEFORE, t)
+        return t
     def sp(m):
         t = m.group(0)
         t = re.sub(r'w:after="80"', 'w:after="%d"' % TIGHT_AFTER, t)
@@ -488,6 +494,8 @@ def tighten(x):
         blk = m.group(0)
         if i <= 163 or 170 <= i <= 197:
             blk = re.sub(r"<w:spacing [^>]*/>", sp, blk)
+        if 164 <= i <= 169:         # Приложение 1: тело и подписи должны помещаться на одном листе
+            blk = re.sub(r"<w:spacing [^>]*/>", sp1, blk)
             blk = re.sub(r"<w:p[ >].*?</w:p>", _narrow_indent, blk, flags=re.S)
         if i in (163, 169, 198):        # подписи сторон: строка не разрывается между листами
             if "<w:cantSplit" in blk:
