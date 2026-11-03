@@ -439,7 +439,7 @@ def layout(x):
         mode = "row" if i < 168 else "func"
         for ci, c in enumerate(cells):
             tr = tr.replace(c, _fix_cell(c, ci == 1, mode, 9 if ci == 1 else 8), 1)
-        if i == 166:
+        if i == 166 and "<w:trHeight" not in tr:
             tr = re.sub(r"(<w:tr[^>]*>)", r'\g<1><w:trPr><w:trHeight w:val="1072"/></w:trPr>', tr, count=1)
         new[i] = tr
     for i in (169, 198):
@@ -490,7 +490,9 @@ def tighten(x):
             blk = re.sub(r"<w:spacing [^>]*/>", sp, blk)
             blk = re.sub(r"<w:p[ >].*?</w:p>", _narrow_indent, blk, flags=re.S)
         if i in (163, 169, 198):        # подписи сторон: строка не разрывается между листами
-            if "<w:trPr>" in blk:
+            if "<w:cantSplit" in blk:
+                pass
+            elif "<w:trPr>" in blk:
                 blk = blk.replace("<w:trPr>", "<w:trPr><w:cantSplit/>", 1)
             else:
                 blk = re.sub(r"(<w:tr[ >][^>]*>(?:<w:tblPrEx>.*?</w:tblPrEx>)?)", r"\g<1><w:trPr><w:cantSplit/></w:trPr>", blk, count=1, flags=re.S)
