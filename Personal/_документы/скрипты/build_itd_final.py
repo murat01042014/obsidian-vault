@@ -286,7 +286,7 @@ FP["Бектемиров А.Р."] = (
    "Осуществляет мониторинг сроков и результатов реализации проектов.",
    "Готовит отчёты, справки и презентационные материалы.",
    "Участвует в организации рабочих встреч и мероприятий.",
-   "Выполняет поручения непосредственного руководителя в пределах своей компетенции."],
+   "Выполняет поручения руководства в пределах своей компетенции."],
   ["Provides organizational support for projects, coordination of project tasks and monitoring of the implementation of activities.",
    "Job functions:",
    "Participates in the development and implementation of projects.",
@@ -294,7 +294,7 @@ FP["Бектемиров А.Р."] = (
    "Monitors the timing and results of project implementation.",
    "Prepares reports, reference notes and presentation materials.",
    "Participates in organizing working meetings and events.",
-   "Performs instructions of the immediate supervisor within the scope of their competence."])
+   "Performs instructions of management within the scope of their competence."])
 
 # последний пункт функционала у всех (Мурат, 03.11.2026), если по смыслу такого пункта нет
 PH = ("Выполняет поручения руководства в пределах своей компетенции.",
