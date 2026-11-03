@@ -90,7 +90,7 @@ P = [
          start="02.11.2026", end="02.11.2027", cdate="02.11.2026", rep=REP_COMM, func=None),
     # 02.11.2026: удостоверения есть, черновиков ТД не было - адрес и функции пока маркером
     dict(file="Бектемиров А.Р.", fem=False, ru="Бектемиров Амир Русланович", en="Bektemirov Amir Ruslanovich",
-         idn="064064248", idd="21.07.2026", addr_ru="г. Астана, ул. Кошкарбаева, д. 54а", addr_en="Astana, Koshkarbayev St., 54a",
+         idn="064064248", idd="21.07.2026", addr_ru="г. Астана, ул. Кошкарбаева, д. 54а, кв. 11", addr_en="Astana, Koshkarbayev St., 54a, apt. 11",
          pos="pm_lead", salary=(700000, "семьсот тысяч", "seven hundred thousand"),
          start="02.11.2026", end=None, cdate="02.11.2026", rep=REP_PM, func=None),
     dict(file="Мухамадиева Н.А.", fem=True, ru="Мухамадиева Найля Азаматовна", en="Mukhamadiyeva Nailya Azamatovna",
@@ -295,6 +295,18 @@ FP["Бектемиров А.Р."] = (
    "Prepares reports, reference notes and presentation materials.",
    "Participates in organizing working meetings and events.",
    "Performs instructions of the immediate supervisor within the scope of their competence."])
+
+# последний пункт функционала у всех (Мурат, 03.11.2026), если по смыслу такого пункта нет
+PH = ("Выполняет поручения руководства в пределах своей компетенции.",
+      "Performs instructions of management within the scope of their competence.")
+for _k, (_ru, _en) in FP.items():
+    if any("поручени" in l.lower() for l in _ru):
+        continue
+    _num = (lambda t: "%d. " % (sum(1 for l in _ru if l[:1].isdigit()) + 1) + t) if _ru[-1][:1].isdigit() else (lambda t: t)
+    _ru.append(_num(PH[0])); _en.append(_num(PH[1]))
+# у кого функционал был одним абзацем в п. 4 - выносим его отдельным абзацем и добавляем тот же пункт
+for _k, _fn in (("Серикжанова А.Т.", FUNC_PO), ("Қуандық Ж.Б.", FUNC_PM), ("Жанділдаев Б.Б.", FUNC_PM), ("Шербаева Б.Б.", FUNC_PM)):
+    FP[_k] = ([_fn[0], PH[0]], [_fn[1], PH[1]])
 BODY_RPR = '<w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr>'
 BODY_P = ('<w:p><w:pPr><w:tabs><w:tab w:val="left" w:pos="800"/></w:tabs><w:spacing w:after="80" w:line="240" w:lineRule="auto"/>'
           '<w:ind w:left="800" w:hanging="87"/><w:jc w:val="both"/>' + BODY_RPR + '</w:pPr><w:r>' + BODY_RPR + '<w:t xml:space="preserve">{}</w:t></w:r></w:p>')
@@ -370,7 +382,7 @@ TABS_EN = '<w:tabs><w:tab w:val="left" w:pos="284"/><w:tab w:val="left" w:pos="9
 TABS_RU = '<w:tabs><w:tab w:val="left" w:pos="290"/><w:tab w:val="left" w:pos="998"/></w:tabs>'
 TABS_RU_LIST = '<w:tabs><w:tab w:val="left" w:pos="290"/></w:tabs>'
 HEAD_RU = ("Основные должностные функции", "Job functions", "Main job functions")
-DESC_START = ("Описание должности", "Position description", "Главный специалист", "The Chief Specialist", "Обеспечивает", "Provides")
+DESC_START = ("Описание должности", "Position description", "Главный специалист", "The Chief Specialist", "Обеспечивает", "Provides", "Осуществляет")
 
 def _ptext(p):
     return re.sub(r"<[^>]+>", "", p)
@@ -396,13 +408,14 @@ def _set_ppr(p, ru, kind, num):
 def _fix_cell(c, ru, mode, num):
     ps = re.findall(r"<w:p[ >].*?</w:p>", c, re.S)
     out = c
+    def _is_item(k):
+        t = _ptext(ps[k]).strip()
+        return (k >= 1 and not t[:1].isdigit() and not t.endswith(":") and t.rstrip(":") not in HEAD_RU and not t.startswith(DESC_START))
+    n_items = sum(1 for k in range(len(ps)) if _is_item(k)) if mode == "func" else 0
     for k, p in enumerate(ps):
-        t = _ptext(p).strip()
         kind = "row" if mode == "row" else "plain"
-        if mode == "func" and k >= 1:
-            low = t.rstrip(":")
-            is_item = (not t[:1].isdigit() and not t.endswith(":") and low not in HEAD_RU and not t.startswith(DESC_START))
-            kind = "item" if is_item else "plain"
+        if mode == "func" and n_items >= 2 and _is_item(k):    # одиночный пункт списком не оформляем
+            kind = "item"
         out = out.replace(p, _set_ppr(p, ru, kind, num), 1)
     return out
 
