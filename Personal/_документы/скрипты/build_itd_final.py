@@ -476,6 +476,10 @@ def _narrow_indent(pm):
     p = p.replace('<w:ind w:left="800" w:hanging="800"/>', '<w:ind w:left="%d" w:hanging="%d"/>' % (w, w))
     return p.replace('<w:tab w:val="left" w:pos="800"/>', '<w:tab w:val="left" w:pos="%d"/>' % w)
 
+_CUR = [""]   # файл текущего договора (для tighten)
+# у этих работников абзац с данными в EN-колонке длиннее: пустой абзац перед подписью Работника не нужен (подписи EN/RU и так выровнены)
+_NO_SIG_BLANK = lambda f: any(k in f for k in ("Талғат", "Тленчиева", "Шербаева"))
+
 def tighten(x):
     trs = list(re.finditer(r"<w:tr[ >].*?</w:tr>", x, re.S))
     def sp1(m):
@@ -497,6 +501,14 @@ def tighten(x):
         if 164 <= i <= 169:         # Приложение 1: тело и подписи должны помещаться на одном листе
             blk = re.sub(r"<w:spacing [^>]*/>", sp1, blk)
             blk = re.sub(r"<w:p[ >].*?</w:p>", _narrow_indent, blk, flags=re.S)
+        if i == 169:                    # правка Мурата 04.11: в EN-колонке пустой абзац перед линией подписи Работника
+            cs = re.findall(r"<w:tc>.*?</w:tc>", blk, re.S)
+            ps = re.findall(r"<w:p[ >].*?</w:p>", cs[0], re.S)
+            tx = [re.sub(r"<[^>]+>", "", p).strip() for p in ps]
+            k = next(j for j in range(len(ps) - 1, -1, -1) if tx[j].startswith("____"))
+            blank = re.sub(r' w14:(?:paraId|textId)="[^"]*"', "", next(p for p, t in zip(ps, tx) if t == ""))
+            if tx[k - 1] != "" and not _NO_SIG_BLANK(_CUR[0]):
+                blk = blk.replace(cs[0], cs[0].replace(ps[k], blank + ps[k], 1), 1)
         if i in (163, 169, 198):        # подписи сторон: строка не разрывается между листами
             if "<w:cantSplit" in blk:
                 pass
@@ -542,6 +554,7 @@ def build(p):
             if x2.count(old) != 1:
                 raise SystemExit("п. 2.5 не найден: " + old[:40])
             x2 = x2.replace(old, new)
+    _CUR[0] = p["file"]
     x2 = tighten(layout(x2))
     minidom.parseString(x2.encode("utf8"))
     out = os.path.join(OUTDIR, f"ИТД - {p['file']} (предитоговый 2026-11-03{p.get('tag', '')}).docx")
