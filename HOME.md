@@ -57,6 +57,7 @@
 
 ## Люди
 
+- [people/laura-kazakh-invest.md](people/laura-kazakh-invest.md) — Лаура, KAZAKH INVEST: проверяет итоговую заявку по Проекту Нур.
 - [people/example-person.md](people/example-person.md) — [замени на реального
   человека из твоих дел]
 
