@@ -10,7 +10,11 @@
 | Краска штемпельная "Brauberg", 45 мл, водная основа, синяя (на складе 14) | 1 | 545 | 545 | 223595, https://b2bcompany.kz/catalog/kantselyariya_dlya_ofisa/shtempelnaya_produktsiya/100219/ |
 | Бумага для печати "Deli MateCopy", А4, 80 г/м2, белая, класс C+, 500 л в пачке (на складе 21) | 5 | 2 150 | 10 750 | 044-Z252, https://b2bcompany.kz/catalog/bumazhnaya_produktsiya/bumaga_dlya_ofisnoy_tekhniki/bumaga_ofisnaya_a4/101122/ |
 
-Итого в корзине: 12 983 без НДС, НДС 2 078, к оплате 15 060.
+| Батарейки "Eleven", LR6, 1.5V, AA, 2 шт. в блистере (на складе 36) | 5 уп. (10 шт.) | 565 | 2 825 | 301747, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/batareyki_i_zaryadnye_ustroystva/batareyki_aa/95287/ |
+| Батарейки "Eleven", LR3, 1.5V, AAA, 2 шт. в блистере (на складе 58) | 5 уп. (10 шт.) | 570 | 2 850 | 301744, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/batareyki_i_zaryadnye_ustroystva/batareyki_aaa/88855/ |
+| Сетевой удлинитель "Sonnen U-133GS", 3 розетки, 5 м, выключатель, заземление, чёрный (на складе 12) | 3 | 6 250 | 18 750 | 513267, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/elektrotovary/setevye_filtry/93723/ |
+
+Итого в корзине (6 позиций): товары 34 039 без НДС, НДС 5 446, к оплате 39 485.
 
 Альтернативы: датер «Пропись» 7 228; краска Trodat 28 мл водная синяя 2 352 (родная), Staff Manager 50 мл водно-спиртовая 396; бумага DELI EasyCopy класс C 2 150, SvetoCopy Classic 2 450.
 
