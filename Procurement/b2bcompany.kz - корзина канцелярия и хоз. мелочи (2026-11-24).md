@@ -14,7 +14,11 @@
 | Батарейки "Eleven", LR3, 1.5V, AAA, 2 шт. в блистере (на складе 58) | 5 уп. (10 шт.) | 570 | 2 850 | 301744, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/batareyki_i_zaryadnye_ustroystva/batareyki_aaa/88855/ |
 | Сетевой удлинитель "Sonnen U-133GS", 3 розетки, 5 м, выключатель, заземление, чёрный (на складе 12) | 3 | 6 250 | 18 750 | 513267, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/elektrotovary/setevye_filtry/93723/ |
 
-Итого в корзине (6 позиций): товары 34 039 без НДС, НДС 5 446, к оплате 39 485.
+| Ежедневник недатированный "Deli", 180 л, А5, кожзам, мягкий переплёт, чёрный (на складе 29) | 2 | 2 550 | 5 100 | 044-22298/BK, https://b2bcompany.kz/catalog/dlya_planirovaniya/ezhednevniki_nedatirovannye_a5/100846/ |
+| Планинг недатированный "Brauberg" Select, 60 л, 305x140 мм, балакрон, на гребне, чёрный (на складе 11) | 1 | 3 120 | 3 120 | 123797, https://b2bcompany.kz/catalog/dlya_planirovaniya/planingi/100291/ |
+
+25.11.2026: корзина на сайте сбросилась, набрана заново (привязана к браузеру). Добавлены ежедневники и планинг.
+Итого в корзине (8 позиций, на 25.11): товары 41 125 без НДС, НДС 6 580, к оплате 47 705 (без ежедневника и планинга было 6 позиций, 39 485).
 
 Альтернативы: датер «Пропись» 7 228; краска Trodat 28 мл водная синяя 2 352 (родная), Staff Manager 50 мл водно-спиртовая 396; бумага DELI EasyCopy класс C 2 150, SvetoCopy Classic 2 450.
 
