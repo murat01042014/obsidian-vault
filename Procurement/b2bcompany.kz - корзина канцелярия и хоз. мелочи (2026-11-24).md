@@ -8,7 +8,8 @@
 |---|---|---|---|---|
 | Датер-мини "Trodat Printy 4810", 1 строка, «Цифры», 20x3,8 мм, синий оттиск (самонаборный, на складе 3) | 1 | 3 765 | 3 765 | 092399824992, https://b2bcompany.kz/catalog/kantselyariya_dlya_ofisa/shtempelnaya_produktsiya/87523/ |
 | Краска штемпельная "Brauberg", 45 мл, водная основа, синяя (на складе 14) | 1 | 545 | 545 | 223595, https://b2bcompany.kz/catalog/kantselyariya_dlya_ofisa/shtempelnaya_produktsiya/100219/ |
-| Бумага для печати "Deli MateCopy", А4, 80 г/м2, белая, класс C+, 500 л в пачке (на складе 21) | 5 | 2 150 | 10 750 | 044-Z252, https://b2bcompany.kz/catalog/bumazhnaya_produktsiya/bumaga_dlya_ofisnoy_tekhniki/bumaga_ofisnaya_a4/101122/ |
+| Бумага для печати "DELI EasyCopy", А4, 80 г/м2, белая, класс C, 500 л в пачке (на складе 1949; с 25.11 вместо MateCopy C+, которого не стало в наличии) | 5 | 2 150 | 10 750 | 044-Z202, https://b2bcompany.kz/catalog/bumazhnaya_produktsiya/bumaga_dlya_ofisnoy_tekhniki/bumaga_ofisnaya_a4/102613/ |
+~~| Бумага для печати "Deli MateCopy", А4, 80 г/м2, белая, класс C+, 500 л в пачке (на складе 21) | 5 | 2 150 | 10 750 | 044-Z252, https://b2bcompany.kz/catalog/bumazhnaya_produktsiya/bumaga_dlya_ofisnoy_tekhniki/bumaga_ofisnaya_a4/101122/ |~~ (нет в наличии 25.11)
 
 | Батарейки "Eleven", LR6, 1.5V, AA, 2 шт. в блистере (на складе 36) | 5 уп. (10 шт.) | 565 | 2 825 | 301747, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/batareyki_i_zaryadnye_ustroystva/batareyki_aa/95287/ |
 | Батарейки "Eleven", LR3, 1.5V, AAA, 2 шт. в блистере (на складе 58) | 5 уп. (10 шт.) | 570 | 2 850 | 301744, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/batareyki_i_zaryadnye_ustroystva/batareyki_aaa/88855/ |
@@ -16,9 +17,10 @@
 
 | Ежедневник недатированный "Deli", 180 л, А5, кожзам, мягкий переплёт, чёрный (на складе 29) | 2 | 2 550 | 5 100 | 044-22298/BK, https://b2bcompany.kz/catalog/dlya_planirovaniya/ezhednevniki_nedatirovannye_a5/100846/ |
 | Планинг недатированный "Brauberg" Select, 60 л, 305x140 мм, балакрон, на гребне, чёрный (на складе 11) | 1 | 3 120 | 3 120 | 123797, https://b2bcompany.kz/catalog/dlya_planirovaniya/planingi/100291/ |
+| Сетевой фильтр "Defender ES", 5 розеток, 1,8 м, белый (на складе 7) | 2 | 3 684 | 7 368 | 99481, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/elektrotovary/setevye_filtry/836/ |
 
 25.11.2026: корзина на сайте сбросилась, набрана заново (привязана к браузеру). Добавлены ежедневники и планинг.
-Итого в корзине (8 позиций, на 25.11): товары 41 125 без НДС, НДС 6 580, к оплате 47 705 (без ежедневника и планинга было 6 позиций, 39 485).
+Итого в корзине (9 позиций, на 25.11): товары 47 477 без НДС, НДС 7 596, к оплате 55 073.
 
 Альтернативы: датер «Пропись» 7 228; краска Trodat 28 мл водная синяя 2 352 (родная), Staff Manager 50 мл водно-спиртовая 396; бумага DELI EasyCopy класс C 2 150, SvetoCopy Classic 2 450.
 
