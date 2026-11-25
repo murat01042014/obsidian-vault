@@ -18,9 +18,14 @@
 | Ежедневник недатированный "Deli", 180 л, А5, кожзам, мягкий переплёт, чёрный (на складе 29) | 2 | 2 550 | 5 100 | 044-22298/BK, https://b2bcompany.kz/catalog/dlya_planirovaniya/ezhednevniki_nedatirovannye_a5/100846/ |
 | Планинг недатированный "Brauberg" Select, 60 л, 305x140 мм, балакрон, на гребне, чёрный (на складе 11) | 1 | 3 120 | 3 120 | 123797, https://b2bcompany.kz/catalog/dlya_planirovaniya/planingi/100291/ |
 | Сетевой фильтр "Defender ES", 5 розеток, 1,8 м, белый (на складе 7) | 2 | 3 684 | 7 368 | 99481, https://b2bcompany.kz/catalog/ofisnaya_tekhnika_i_aksessuary/elektrotovary/setevye_filtry/836/ |
+| Ручка шариковая "OfficeSpace LC", 0,7 мм, синяя, прозрачный корпус (на складе 2000) | 10 | 36 | 360 | BPBAR_42931, https://b2bcompany.kz/catalog/kantselyariya_dlya_ofisa/pismennye_prinadlezhnosti/ruchki_sharikovye/49482/ |
+| Папка-скоросшиватель пластиковая "Brauberg", А4, 100 л, 130/180 мкм, прозрачный верх, салатовая (на складе 23) | 10 | 146 | 1 460 | 228674, https://b2bcompany.kz/catalog/kantselyariya_dlya_ofisa/papki/papki_skorosshivateli/82566/ |
+| Папка-скоросшиватель картонная "OfficeSpace" серия "Дело", А4, 200 л, 280 г/м2, 30 мм, немелованная, белая (на складе 2167) | 5 | 112 | 560 | 225338, https://b2bcompany.kz/catalog/kantselyariya_dlya_ofisa/papki/papki_skorosshivateli/99441/ |
+| Папка-регистратор "Kuvert", А4, 50 мм, боковой карман, синяя (на складе 100) | 2 | 1 019 | 2 038 | 217-312, https://b2bcompany.kz/catalog/kantselyariya_dlya_ofisa/papki/papki_registratory/108104/ |
 
 25.11.2026: корзина на сайте сбросилась, набрана заново (привязана к браузеру). Добавлены ежедневники и планинг.
-Итого в корзине (9 позиций, на 25.11): товары 47 477 без НДС, НДС 7 596, к оплате 55 073.
+Итого в корзине (13 позиций, на 25.11): товары 51 286 без НДС, НДС 8 205, к оплате 59 491.
+Не добавлено: Папка-регистратор Kuvert А4, 72 мм, боковой карман, синяя ×2 (1 019, 217-112, .../papki_registratory/99749/) - на 4-й строке скриншота Мурата название обрезано, добавление не сработало, ждёт подтверждения.
 
 Альтернативы: датер «Пропись» 7 228; краска Trodat 28 мл водная синяя 2 352 (родная), Staff Manager 50 мл водно-спиртовая 396; бумага DELI EasyCopy класс C 2 150, SvetoCopy Classic 2 450.
 
